@@ -1,0 +1,30 @@
+%% Uber — public engineering. Marketplace product; Michelangelo named.
+
+flowchart TB
+  subgraph channels["Channels — public"]
+    Rider["Rider / Eats / Freight apps"]
+    Driver["Driver / courier apps"]
+  end
+
+  subgraph market["Marketplace — public product, few names"]
+    Match["Matching / pricing"]
+  end
+
+  subgraph ml["ML — public blogs"]
+    MA["Michelangelo"]
+    Pal["Palette"]
+    Studio["MA Studio / Canvas"]
+  end
+
+  subgraph unknown["Unknown"]
+    Pay["Payments / risk names"]
+    CRM["Rider / driver CRM"]
+    ITSM["Internal ITSM"]
+  end
+
+  Rider --> Match
+  Driver --> Match
+  Match --> MA
+  MA --> Pal
+  MA --> Studio
+  Match -.-> Pay

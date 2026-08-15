@@ -1,0 +1,25 @@
+%% NVIDIA — public product map. DSX is what they sell, not NV IT.
+
+flowchart TB
+  subgraph sold["Sold stack — public"]
+    CUDA["CUDA"]
+    DGX["DGX / HGX"]
+    SX["Spectrum-X"]
+    NIM["NIM / NGC"]
+  end
+
+  subgraph twin["Digital twin — public"]
+    Omni["Omniverse / OpenUSD"]
+    DSX["Omniverse DSX Blueprint"]
+  end
+
+  subgraph unknown["Unknown"]
+    CRM["Internal CRM / ITSM"]
+    Fab["Foundry / supply names"]
+  end
+
+  CUDA --> DGX
+  DGX --> SX
+  DGX --> NIM
+  DSX --> Omni
+  Omni -.-> DGX
