@@ -1,0 +1,25 @@
+%% Netflix — public engineering. Control plane on AWS; Open Connect at ISPs.
+
+flowchart TB
+  subgraph client["Client — public"]
+    Apps["Apps / TV / web"]
+  end
+
+  subgraph edge["Edge — public"]
+    OC["Open Connect"]
+  end
+
+  subgraph aws["AWS control plane — public"]
+    MS["Microservices"]
+    Chaos["Chaos engineering"]
+  end
+
+  subgraph unknown["Unknown"]
+    Studio["Studio finance / ERP"]
+    CRM["Ads CRM / ITSM"]
+  end
+
+  Apps --> OC
+  Apps --> MS
+  MS --> Chaos
+  MS --> aws

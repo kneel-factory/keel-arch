@@ -1,0 +1,34 @@
+%% Salesforce — public product map. Not Salesforce IT internals.
+
+flowchart TB
+  subgraph crm["CRM clouds — public"]
+    Sales["Sales Cloud"]
+    Svc["Service Cloud"]
+    Mkt["Marketing Cloud"]
+  end
+
+  subgraph plat["Platform — public"]
+    Core["Core / Apex / APIs"]
+    DC["Data Cloud"]
+    HF["Hyperforce"]
+  end
+
+  subgraph agents["Agents — public"]
+    AF["Agentforce"]
+    Ein["Einstein / Sessions API"]
+  end
+
+  subgraph estate["Estate — public"]
+    Slack["Slack"]
+    Tab["Tableau"]
+    Mule["MuleSoft"]
+  end
+
+  Sales --> Core
+  Svc --> Core
+  Mkt --> DC
+  AF --> Core
+  AF --> DC
+  Ein --> AF
+  Core --> HF
+  Mule --> Core

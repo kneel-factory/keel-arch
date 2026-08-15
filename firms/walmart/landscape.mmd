@@ -1,0 +1,23 @@
+%% Walmart — public reconstruction. Thin on unnamed store cores.
+
+flowchart TB
+  subgraph channels["Channels — public"]
+    Stores["Stores"]
+    Ecom["Walmart.com / app"]
+    Mkt["Marketplace"]
+    RL["Retail Link — suppliers"]
+  end
+
+  subgraph cloud["Cloud — public"]
+    Azure["Azure partnership"]
+    WC["Walmart Cloud"]
+  end
+
+  subgraph unknown["Unknown"]
+    POS["POS / replenishment names"]
+    CRM["CRM / ITSM"]
+  end
+
+  Stores -.-> POS
+  Ecom --> cloud
+  RL -.-> unknown
