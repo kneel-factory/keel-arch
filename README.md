@@ -44,3 +44,7 @@ New bar (2026-08-16): every firm gets C360.md + SYSTEMS.md. Public sniff first. 
 - [firms/paypal](firms/paypal/)
 - [firms/microsoft](firms/microsoft/)
 - [firms/progressive](firms/progressive/) — thin
+
+- [firms/amazon](firms/amazon/)
+- [firms/alphabet](firms/alphabet/)
+- [firms/apple](firms/apple/) — thin

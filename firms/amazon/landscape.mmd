@@ -1,0 +1,26 @@
+%% Amazon — public reconstruction. AWS = product. Retail internals stay thin.
+
+flowchart TB
+  subgraph stores["Stores — public ops, few names"]
+    Site["amazon.com"]
+    FC["Fulfillment network"]
+    Apollo["Apollo deploy — public talks"]
+    Brazil["Brazil build — public talks"]
+  end
+
+  subgraph aws["AWS — public product"]
+    Compute["EC2 / Lambda / …"]
+    Data["S3 / DynamoDB / …"]
+    Connect["Amazon Connect"]
+  end
+
+  subgraph unknown["Unknown"]
+    OMS["Order / inventory names"]
+    CRM["Internal CRM / ITSM"]
+  end
+
+  Site --> FC
+  Site --> Apollo
+  Apollo --> aws
+  Brazil --> Apollo
+  Connect -.-> CRM

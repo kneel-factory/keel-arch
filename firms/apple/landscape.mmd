@@ -1,0 +1,20 @@
+%% Apple — public reconstruction. Thin on purpose.
+
+flowchart TB
+  subgraph products["Products — public"]
+    iCloud["iCloud"]
+    Pay["Apple Pay"]
+    Store["App Store"]
+    ABM["Apple Business Manager"]
+  end
+
+  subgraph retail["Retail — public ops"]
+    Shops["Apple Stores + online"]
+  end
+
+  subgraph unknown["Unknown — empty on purpose"]
+    IT["Internal IT / CRM / ITSM"]
+    Cloud["Runtime split"]
+  end
+
+  Shops -.-> unknown
