@@ -1,0 +1,33 @@
+%% UnitedHealth — 10-K segments + public Optum network APIs.
+
+flowchart TB
+  subgraph uhc["UnitedHealthcare — public segments"]
+    EI["Employer & Individual"]
+    MR["Medicare & Retirement"]
+    CS["Community & State"]
+  end
+
+  subgraph optum["Optum — public segments"]
+    OH["Optum Health"]
+    OI["Optum Insight"]
+    Rx["Optum Rx"]
+  end
+
+  subgraph net["Network — public APIs"]
+    CH["Change / Intelligent Health Care Network"]
+    API["Eligibility / claims APIs"]
+  end
+
+  subgraph unknown["Unknown"]
+    Adj["Adjudication / membership names"]
+    CRM["Member / provider CRM"]
+    EMR["Clinic EMR names"]
+  end
+
+  EI --> CH
+  MR --> CH
+  CS --> CH
+  CH --> API
+  OI --> API
+  Rx -.-> OH
+  Adj -.-> uhc
