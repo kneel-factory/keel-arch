@@ -24,5 +24,8 @@ Goldman Sachs is the template, not the exception.
 - [firms/jpmorgan-chase](firms/jpmorgan-chase/)
 - [firms/bank-of-america](firms/bank-of-america/)
 - [landscape/financial-services](landscape/financial-services/) — BIAN-shaped generic
+- [firms/morgan-stanley](firms/morgan-stanley/)
+- [firms/wells-fargo](firms/wells-fargo/)
+- [firms/blackrock](firms/blackrock/)
 
 Next batches go under `firms/<slug>/`. Empty boxes stay empty.
