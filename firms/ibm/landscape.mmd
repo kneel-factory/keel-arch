@@ -1,0 +1,23 @@
+%% IBM — public product / hybrid story.
+
+flowchart TB
+  subgraph hybrid["Hybrid — public"]
+    Z["IBM Z / z/OS"]
+    OCP["OpenShift"]
+    Cloud["IBM Cloud"]
+  end
+
+  subgraph ai["AI — public"]
+    WX["watsonx"]
+  end
+
+  subgraph ops["Ops products — public"]
+    Max["Maximo"]
+    Inst["Instana"]
+    Cog["Cognos"]
+  end
+
+  Z --> OCP
+  OCP --> Cloud
+  WX --> OCP
+  Inst --> OCP

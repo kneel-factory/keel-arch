@@ -1,0 +1,23 @@
+%% Oracle — public product map. Fusion tenant is sales-gated (Orbit fact).
+
+flowchart TB
+  subgraph saas["SaaS — public"]
+    Fusion["Fusion Cloud ERP/HCM/CX"]
+    NS["NetSuite"]
+  end
+
+  subgraph legacy["On-prem lines — public"]
+    EBS["E-Business Suite"]
+    PS["PeopleSoft"]
+    JDE["JD Edwards"]
+  end
+
+  subgraph cloud["Cloud — public"]
+    OCI["OCI"]
+    ADB["Autonomous DB"]
+  end
+
+  Fusion --> OCI
+  NS --> OCI
+  ADB --> OCI
+  EBS -.-> OCI

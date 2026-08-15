@@ -48,3 +48,7 @@ New bar (2026-08-16): every firm gets C360.md + SYSTEMS.md. Public sniff first. 
 - [firms/amazon](firms/amazon/)
 - [firms/alphabet](firms/alphabet/)
 - [firms/apple](firms/apple/) — thin
+
+- [firms/meta](firms/meta/)
+- [firms/oracle](firms/oracle/)
+- [firms/ibm](firms/ibm/)
