@@ -1,0 +1,23 @@
+%% ServiceNow — public product map. Orbit PDI is a customer org, not this diagram.
+
+flowchart TB
+  subgraph now["Now Platform — public"]
+    ITSM["ITSM"]
+    CSM["CSM"]
+    HR["HRSD"]
+    Store["Store / plugins"]
+  end
+
+  subgraph agents["Agents — public"]
+    NA["Now Assist"]
+    BA["Build Agent"]
+  end
+
+  subgraph api["APIs — public"]
+    Table["Table API"]
+  end
+
+  ITSM --> Table
+  CSM --> Table
+  NA --> now
+  BA --> now
