@@ -1,0 +1,30 @@
+%% Disney — Disney+ on AWS is public. Parks/studio stay empty.
+
+flowchart TB
+  subgraph stream["Disney+ — public"]
+    Apps["Apps / TV / web"]
+    CW["Continue Watching / Watchlist"]
+  end
+
+  subgraph aws["AWS — public talks"]
+    DDB["DynamoDB global tables"]
+    Kin["Kinesis"]
+    CDN["CloudFront / S3"]
+  end
+
+  subgraph other["Other products — public names only"]
+    Hulu["Hulu / ESPN+"]
+    Parks["Parks"]
+  end
+
+  subgraph unknown["Unknown"]
+    Studio["Studio / MAM / ERP"]
+    CRM["Parks / member CRM"]
+  end
+
+  Apps --> CDN
+  Apps --> CW
+  CW --> DDB
+  Kin --> DDB
+  Hulu -.-> stream
+  Parks -.-> CRM
