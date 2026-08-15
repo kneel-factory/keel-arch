@@ -1,0 +1,33 @@
+%% Wells Fargo — public reconstruction (CIO, CIO Dive, MongoDB case study).
+
+flowchart TB
+  subgraph channels["Channels — public"]
+    Mobile["Mobile + Fargo assistant"]
+    Cards["Cards 2.0 channels"]
+  end
+
+  subgraph cloud["Multicloud — public"]
+    Azure["Azure — primary public cloud"]
+    GCP["Google Cloud — AI / data"]
+    K8s["Private Kubernetes clouds"]
+  end
+
+  subgraph cards["Cards 2.0 — public"]
+    MF["Mainframe SOR"]
+    ODS["MongoDB operational data store"]
+    Facade["API façade / microservices"]
+  end
+
+  subgraph unknown["Unknown"]
+    Core["Deposit core"]
+    CRM["CRM / ITSM"]
+  end
+
+  Mobile --> Azure
+  Mobile --> GCP
+  Cards --> Facade
+  Facade --> ODS
+  MF --> ODS
+  Azure --> K8s
+  GCP --> K8s
+  Core -.-> unknown

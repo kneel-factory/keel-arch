@@ -1,0 +1,23 @@
+%% BlackRock — public reconstruction (Aladdin product pages). Thin on purpose.
+
+flowchart TB
+  subgraph public["Public products"]
+    Aladdin["Aladdin"]
+    Wealth["Aladdin Wealth"]
+    eFront["eFront"]
+  end
+
+  subgraph clients["Clients — public"]
+    BR["BlackRock portfolios"]
+    Ext["External Aladdin clients"]
+  end
+
+  subgraph unknown["Unknown"]
+    CRM["CRM / ITSM"]
+    Cloud["Runtime / cloud split"]
+  end
+
+  BR --> Aladdin
+  Ext --> Aladdin
+  Aladdin --> Wealth
+  Aladdin --> eFront

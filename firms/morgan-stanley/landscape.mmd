@@ -1,0 +1,33 @@
+%% Morgan Stanley — public reconstruction (OpenAI story, Business Wire, job posts).
+
+flowchart TB
+  subgraph channels["Channels — public"]
+    FA["Financial advisors"]
+    WM["Wealth platforms — existence public"]
+  end
+
+  subgraph ai["AI — public"]
+    Asst["AI @ Morgan Stanley Assistant\nGPT-4 over internal corpus"]
+    Debrief["AI @ Morgan Stanley Debrief\nWhisper + GPT-4"]
+  end
+
+  subgraph data["Data — thinly public"]
+    Docs["Internal research corpus ~100k docs"]
+    DBX["Databricks — cited in hiring"]
+  end
+
+  subgraph ets["ETS — public count only"]
+    Apps["3000+ production apps — unnamed"]
+  end
+
+  subgraph unknown["Unknown"]
+    IB["IB / risk books"]
+    CRM["CRM / ITSM"]
+  end
+
+  FA --> Asst
+  FA --> Debrief
+  Asst --> Docs
+  Debrief --> Docs
+  Docs -.-> DBX
+  WM -.-> Apps
