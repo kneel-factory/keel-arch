@@ -1,0 +1,30 @@
+%% Tesla — public products + NACS. Training-cluster names stay empty.
+
+flowchart TB
+  subgraph product["Product — public"]
+    Cars["Vehicles + OTA"]
+    FSD["FSD Supervised / AI Computer"]
+    Energy["Powerwall / Megapack"]
+  end
+
+  subgraph charge["Charge — public"]
+    SC["Supercharger"]
+    NACS["NACS / SAE J3400"]
+  end
+
+  subgraph ops["Ops — public sites, no names"]
+    Giga["Gigafactories"]
+  end
+
+  subgraph unknown["Unknown"]
+    Train["Training cluster names"]
+    CRM["CRM / ITSM"]
+    MES["Factory MES / ERP"]
+  end
+
+  Cars --> FSD
+  Cars --> SC
+  SC --> NACS
+  Energy --> SC
+  Giga --> Cars
+  FSD -.-> Train

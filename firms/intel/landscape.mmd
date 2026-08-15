@@ -1,0 +1,27 @@
+%% Intel — IDM 2.0 / Foundry public. Fab MES and IT stay empty.
+
+flowchart TB
+  subgraph products["Products — public"]
+    Core["Core / Xeon / Arc"]
+  end
+
+  subgraph foundry["Foundry — public"]
+    IDM["IDM 2.0"]
+    N18["18A RibbonFET / PowerVia"]
+    Pkg["EMIB / Foveros"]
+  end
+
+  subgraph eco["Customer enablement — public"]
+    IFS["Intel Foundry / Alliance"]
+  end
+
+  subgraph unknown["Unknown"]
+    MES["Fab MES / yield names"]
+    CRM["Internal CRM / ITSM"]
+  end
+
+  IDM --> N18
+  N18 --> Pkg
+  Pkg --> Core
+  IFS --> N18
+  N18 -.-> MES

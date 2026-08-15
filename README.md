@@ -64,3 +64,7 @@ New bar (2026-08-16): every firm gets C360.md + SYSTEMS.md. Public sniff first. 
 - [firms/nvidia](firms/nvidia/)
 - [firms/uber](firms/uber/)
 - [firms/unitedhealth](firms/unitedhealth/)
+
+- [firms/tesla](firms/tesla/)
+- [firms/disney](firms/disney/)
+- [firms/intel](firms/intel/)
