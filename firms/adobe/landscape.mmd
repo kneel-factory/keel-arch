@@ -1,0 +1,24 @@
+%% Adobe — public product map.
+
+flowchart TB
+  subgraph exp["Experience Cloud — public"]
+    AEP["Adobe Experience Platform"]
+    An["Analytics"]
+    JO["Journey Optimizer"]
+    Mk["Marketo Engage"]
+  end
+
+  subgraph create["Create — public"]
+    CC["Creative Cloud"]
+    DC["Document Cloud"]
+    WF["Workfront"]
+  end
+
+  subgraph ai["AI — public"]
+    FF["Firefly / Sensei"]
+  end
+
+  Mk --> AEP
+  JO --> AEP
+  An --> AEP
+  FF --> exp

@@ -1,0 +1,20 @@
+%% Cisco — public product map.
+
+flowchart TB
+  subgraph net["Network — public"]
+    Meraki["Meraki"]
+    TE["ThousandEyes"]
+    IOS["IOS / NX-OS"]
+  end
+
+  subgraph colab["Collab — public"]
+    Webex["Webex"]
+  end
+
+  subgraph sec["Sec / obs — public"]
+    Splunk["Splunk"]
+    Duo["Duo"]
+  end
+
+  Meraki --> TE
+  Webex -.-> Splunk
