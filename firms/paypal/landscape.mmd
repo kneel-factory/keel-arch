@@ -1,0 +1,34 @@
+%% PayPal — public reconstruction (Investor Day 2025, HAProxy Meridian, Braintree docs).
+
+flowchart TB
+  subgraph channels["Channels — public"]
+    PP["PayPal checkout"]
+    Venmo["Venmo"]
+    BT["Braintree merchants"]
+  end
+
+  subgraph ent["Enterprise — public"]
+    Orch["Payment orchestration"]
+    Vault["Braintree vault"]
+    Open["PayPal Open"]
+  end
+
+  subgraph fabric["Meridian — public"]
+    Edge["Meridian Edge / HAProxy"]
+    AWS["AWS PrivateLink"]
+    GCP["GCP PSC"]
+    OnPrem["On-prem BUs"]
+  end
+
+  subgraph unknown["Unknown"]
+    Core["Consumer ledger"]
+    CRM["CRM / ITSM"]
+  end
+
+  BT --> Orch
+  Orch --> Vault
+  Open --> Orch
+  PP -.-> Core
+  Edge --> AWS
+  Edge --> GCP
+  Edge --> OnPrem

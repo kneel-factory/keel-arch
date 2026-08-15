@@ -40,3 +40,7 @@ Next batches go under `firms/<slug>/`. Empty boxes stay empty.
 - [firms/charles-schwab](firms/charles-schwab/) — thin
 
 New bar (2026-08-16): every firm gets C360.md + SYSTEMS.md. Public sniff first. Plausible stays labeled. Empty stays empty.
+
+- [firms/paypal](firms/paypal/)
+- [firms/microsoft](firms/microsoft/)
+- [firms/progressive](firms/progressive/) — thin

@@ -1,0 +1,16 @@
+%% Progressive — public reconstruction. Thin on purpose.
+
+flowchart TB
+  subgraph channels["Channels — public"]
+    Web["Web / app quotes"]
+    Flo["Flo — brand / assistant, stack unknown"]
+  end
+
+  subgraph unknown["Unknown — empty on purpose"]
+    Policy["Policy admin"]
+    Claims["Claims"]
+    CRM["CRM / ITSM"]
+  end
+
+  Web -.-> Policy
+  Flo -.-> Web

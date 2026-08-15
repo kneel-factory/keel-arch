@@ -1,0 +1,31 @@
+%% Microsoft — public product map, not MSIT internals.
+
+flowchart TB
+  subgraph id["Identity — public"]
+    Entra["Entra ID"]
+  end
+
+  subgraph cloud["Cloud — public"]
+    Azure["Azure"]
+    M365["Microsoft 365"]
+    D365["Dynamics 365"]
+    Power["Power Platform"]
+  end
+
+  subgraph agents["Agent surfaces — public"]
+    Copilot["Copilot"]
+    Studio["Copilot Studio"]
+  end
+
+  subgraph other["Other — public"]
+    GH["GitHub"]
+    LI["LinkedIn"]
+  end
+
+  Entra --> Azure
+  Entra --> M365
+  Entra --> D365
+  D365 --> Copilot
+  M365 --> Copilot
+  Studio --> Copilot
+  Azure --> Copilot
