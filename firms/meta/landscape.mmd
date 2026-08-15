@@ -1,0 +1,27 @@
+%% Meta — public papers + products. Not Meta IT internals.
+
+flowchart TB
+  subgraph products["Products — public"]
+    FB["Facebook"]
+    IG["Instagram"]
+    WA["WhatsApp"]
+    Ads["Ads"]
+  end
+
+  subgraph data["Data — public papers"]
+    TAO["TAO graph"]
+    Presto["Presto"]
+    Hive["Hive"]
+    Scuba["Scuba"]
+  end
+
+  subgraph unknown["Unknown"]
+    CRM["Corp CRM / ITSM"]
+  end
+
+  FB --> TAO
+  IG --> TAO
+  Ads --> TAO
+  TAO --> Presto
+  TAO --> Hive
+  Scuba --> data
