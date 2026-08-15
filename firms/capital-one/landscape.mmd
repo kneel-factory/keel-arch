@@ -1,0 +1,31 @@
+%% Capital One — public reconstruction (capitalone.com/tech + AWS case study).
+
+flowchart TB
+  subgraph channels["Channels — existence public"]
+    App["Digital / branch — stack unnamed"]
+  end
+
+  subgraph compute["Serverless-first — public"]
+    Lambda["AWS Lambda"]
+    Fargate["ECS on Fargate"]
+    CoE["Serverless CoE"]
+  end
+
+  subgraph res["Resilience — public"]
+    R53["Route 53 geo + failover"]
+    Aurora["Aurora Global"]
+    CDK["AWS CDK"]
+  end
+
+  subgraph unknown["Unknown"]
+    Core["Card / deposit cores"]
+    CRM["CRM / ITSM"]
+  end
+
+  App --> Lambda
+  App --> Fargate
+  Lambda --> CoE
+  Fargate --> CoE
+  App --> R53
+  R53 --> Aurora
+  CDK --> Lambda

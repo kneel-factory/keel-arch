@@ -29,3 +29,7 @@ Goldman Sachs is the template, not the exception.
 - [firms/blackrock](firms/blackrock/)
 
 Next batches go under `firms/<slug>/`. Empty boxes stay empty.
+
+- [firms/visa](firms/visa/)
+- [firms/capital-one](firms/capital-one/)
+- [firms/citigroup](firms/citigroup/)

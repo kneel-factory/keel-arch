@@ -1,0 +1,36 @@
+%% Visa — public reconstruction (VisaNet booklet, Visa Perspectives, 2025 ARS).
+
+flowchart TB
+  subgraph access["Access — public"]
+    APIs["On-demand APIs"]
+    MCP["MCP server — Intelligent Commerce"]
+  end
+
+  subgraph vaas["Visa as a Service — 2025 ARS"]
+    Sol["Solutions layer"]
+    Svc["Services — auth, risk, fraud components"]
+    Found["Foundation — network"]
+  end
+
+  subgraph net["VisaNet — public"]
+    Auth["Authorization"]
+    Base2["BASE II clearing / settlement"]
+    STIP["STIP stand-in"]
+    NOC["NOC"]
+    ROC["Risk Operations Center"]
+  end
+
+  subgraph dc["Runtime — public"]
+    DCs["Seven independent data centers"]
+  end
+
+  APIs --> Sol
+  MCP --> Sol
+  Sol --> Svc
+  Svc --> Found
+  Found --> Auth
+  Auth --> Base2
+  Auth --> STIP
+  Auth --> NOC
+  Auth --> ROC
+  net --> DCs
