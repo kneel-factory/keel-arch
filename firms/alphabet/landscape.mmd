@@ -1,0 +1,30 @@
+%% Alphabet / Google — public papers + products. Not Google IT internals.
+
+flowchart TB
+  subgraph products["Products — public"]
+    Search["Search"]
+    YT["YouTube"]
+    Ads["Google Ads"]
+    WS["Workspace"]
+    GCP["Google Cloud"]
+  end
+
+  subgraph infra["Infra — public papers"]
+    Borg["Borg / K8s lineage"]
+    Span["Spanner"]
+    BT["Bigtable"]
+    Col["Colossus"]
+  end
+
+  subgraph sre["Ops culture — public"]
+    SRE["SRE book / practices"]
+  end
+
+  Search --> Borg
+  YT --> Borg
+  Ads --> Borg
+  GCP --> Borg
+  Borg --> Span
+  Borg --> BT
+  Borg --> Col
+  GCP --> SRE
