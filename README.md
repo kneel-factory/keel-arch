@@ -13,6 +13,8 @@ firms/<slug>/
   README.md          # what is public vs unknown
   landscape.mmd      # mermaid shape
   SOURCES.md         # URLs
+  C360.md            # customer-360: public vs plausible vs empty
+  SYSTEMS.md         # sniffed CS/marketing/ops names
 ```
 
 Goldman Sachs is the template, not the exception.
@@ -33,3 +35,6 @@ Next batches go under `firms/<slug>/`. Empty boxes stay empty.
 - [firms/visa](firms/visa/)
 - [firms/capital-one](firms/capital-one/)
 - [firms/citigroup](firms/citigroup/)
+
+
+New bar (2026-08-16): every firm gets C360.md + SYSTEMS.md. Public sniff first. Plausible stays labeled. Empty stays empty.
