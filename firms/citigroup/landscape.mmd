@@ -1,0 +1,30 @@
+%% Citigroup — public reconstruction (Citi/Google press, Fortune, American Banker).
+
+flowchart TB
+  subgraph channels["Channels — thinly public"]
+    Client["Client apps — migrating, unnamed"]
+    Agent["Contact center + Agent Assist"]
+  end
+
+  subgraph gcp["Google Cloud — public 2024"]
+    HPC["Markets HPC / risk calcs"]
+    Vertex["Vertex AI"]
+    VDI["Virtualized desktops — in progress"]
+  end
+
+  subgraph hybrid["Hybrid — public"]
+    K8s["Kubernetes workloads on-prem + cloud"]
+    DC["Data centers — still exist"]
+  end
+
+  subgraph unknown["Unknown"]
+    Core["Core / TTS"]
+    CRM["CRM / ITSM"]
+  end
+
+  Client --> gcp
+  Agent --> Vertex
+  HPC --> gcp
+  VDI --> gcp
+  gcp --> K8s
+  K8s --> DC

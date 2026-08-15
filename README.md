@@ -26,3 +26,7 @@ Goldman Sachs is the template, not the exception.
 - [landscape/financial-services](landscape/financial-services/) — BIAN-shaped generic
 
 Next batches go under `firms/<slug>/`. Empty boxes stay empty.
+
+- [firms/visa](firms/visa/)
+- [firms/capital-one](firms/capital-one/)
+- [firms/citigroup](firms/citigroup/)
