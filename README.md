@@ -52,3 +52,7 @@ New bar (2026-08-16): every firm gets C360.md + SYSTEMS.md. Public sniff first. 
 - [firms/meta](firms/meta/)
 - [firms/oracle](firms/oracle/)
 - [firms/ibm](firms/ibm/)
+
+- [firms/walmart](firms/walmart/)
+- [firms/netflix](firms/netflix/)
+- [firms/salesforce](firms/salesforce/)
