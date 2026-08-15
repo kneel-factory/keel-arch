@@ -1,0 +1,37 @@
+%% JPMorgan Chase — public reconstruction (Athena talks / re:Invent). Not internals.
+
+flowchart TB
+  subgraph channels["Channels — public"]
+    Chase["Chase digital / branch — existence public, stack unknown"]
+    CIB["CIB desks on Athena"]
+  end
+
+  subgraph athena["Athena — public"]
+    Risk["Athena core risk"]
+    CBB["CBB compute units"]
+    Hydra["Hydra object DB"]
+    Sched["Distributed risk scheduler"]
+  end
+
+  subgraph aws["AWS — public for Athena"]
+    EKS["EKS"]
+    Redis["ElastiCache Redis"]
+    RDS["RDS"]
+    S3["S3"]
+  end
+
+  subgraph unknown["Unknown — empty on purpose"]
+    Core["Retail core / cards"]
+    CRM["CRM / ITSM"]
+  end
+
+  CIB --> Risk
+  Risk --> CBB
+  CBB --> Hydra
+  Sched --> CBB
+  CBB --> EKS
+  Sched --> Redis
+  Hydra --> RDS
+  Hydra --> S3
+  Chase -.-> Core
+  Core -.-> unknown

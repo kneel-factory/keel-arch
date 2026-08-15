@@ -1,0 +1,41 @@
+%% Bank of America — public reconstruction (Erica / Fortune / Forrester / CIO remarks).
+
+flowchart TB
+  subgraph channels["Channels — public"]
+    Mobile["Mobile + Erica"]
+    Merrill["Ask Merrill / Ask Private Bank"]
+    CashPro["CashPro Chat"]
+    Emp["Erica for Employees"]
+  end
+
+  subgraph erica["Erica platform — public"]
+    Once["Build-once AI platform"]
+    Models["Model-agnostic inventory"]
+  end
+
+  subgraph host["Hosting — public"]
+    VPC["Virtual private cloud"]
+    Burst["Burst: Microsoft / AWS / Google"]
+    MF["Mainframe — still strategic"]
+  end
+
+  subgraph data["Data — thinly public"]
+    Snow["Snowflake — cited"]
+    Hd["Hadoop — cited"]
+  end
+
+  subgraph unknown["Unknown"]
+    Core["Core / cards"]
+    CRM["CRM / ITSM"]
+  end
+
+  Mobile --> Once
+  Merrill --> Once
+  CashPro --> Once
+  Emp --> Once
+  Once --> Models
+  Once --> VPC
+  VPC --> Burst
+  Once --> Snow
+  Once --> Hd
+  MF -.-> Core

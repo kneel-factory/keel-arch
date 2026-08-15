@@ -16,3 +16,13 @@ firms/<slug>/
 ```
 
 Goldman Sachs is the template, not the exception.
+
+
+## First batch
+
+- [firms/goldman-sachs](firms/goldman-sachs/) — template
+- [firms/jpmorgan-chase](firms/jpmorgan-chase/)
+- [firms/bank-of-america](firms/bank-of-america/)
+- [landscape/financial-services](landscape/financial-services/) — BIAN-shaped generic
+
+Next batches go under `firms/<slug>/`. Empty boxes stay empty.

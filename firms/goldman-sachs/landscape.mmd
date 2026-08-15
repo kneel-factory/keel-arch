@@ -1,0 +1,43 @@
+%% Goldman Sachs — public reconstruction only (talks, FINOS, Databricks, re:Invent).
+%% Not an internal GS diagram. Names that are public: Legend, InvestOne, Marquee,
+%% GS AI Platform, Iceberg lakehouse, Kafka/MSK.
+
+flowchart TB
+  subgraph channels["Channels"]
+    Marquee["Marquee / GS client portal"]
+    Internal["Internal desks / IB / AM / MM"]
+    AIAssist["GS AI assistant UI"]
+  end
+
+  subgraph ai["AI platform — public"]
+    Router["GS AI Platform — task router"]
+    Models["Model inventory — code / research / docs"]
+  end
+
+  subgraph data["Data + governance — public"]
+    Legend["Legend — models, lineage, entitlements\nFINOS open source"]
+    Lake["Lakehouse — Databricks + Iceberg"]
+    Stream["Kafka / MSK + Flink / Spark"]
+  end
+
+  subgraph core["Core / middle office — public"]
+    InvestOne["InvestOne — AM ledger / positions\nmainframe modernization"]
+    Risk["Risk / pricing books\nSecDB historically cited"]
+    COBOL["COBOL + incremental rewrite"]
+  end
+
+  subgraph cloud["Runtime"]
+    AWS["AWS + hybrid — regulated workloads"]
+  end
+
+  channels --> ai
+  AIAssist --> Router
+  Router --> Models
+  Models --> Legend
+  channels --> Legend
+  Legend --> Lake
+  Stream --> Lake
+  InvestOne --> Legend
+  Risk --> Legend
+  COBOL --> InvestOne
+  Lake --> AWS
