@@ -33,3 +33,7 @@ Next batches go under `firms/<slug>/`. Empty boxes stay empty.
 - [firms/visa](firms/visa/)
 - [firms/capital-one](firms/capital-one/)
 - [firms/citigroup](firms/citigroup/)
+
+- [firms/american-express](firms/american-express/)
+- [firms/mastercard](firms/mastercard/)
+- [firms/charles-schwab](firms/charles-schwab/) — thin

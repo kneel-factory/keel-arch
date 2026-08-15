@@ -1,0 +1,21 @@
+%% Charles Schwab — public reconstruction. Thin on purpose.
+
+flowchart TB
+  subgraph channels["Channels — public"]
+    TOS["thinkorswim"]
+    Retail["Schwab retail / advisor — stack unknown"]
+  end
+
+  subgraph plat["Platform — public"]
+    CF["Tanzu Platform for Cloud Foundry"]
+    Auto["CI/CD contract — all deploys automated"]
+  end
+
+  subgraph unknown["Unknown"]
+    Core["Clearing / custody"]
+    CRM["Advisor CRM"]
+  end
+
+  TOS -.-> CF
+  Retail -.-> CF
+  CF --> Auto

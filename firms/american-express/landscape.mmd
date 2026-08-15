@@ -1,0 +1,29 @@
+%% American Express — public reconstruction (CDO Magazine, earnings).
+
+flowchart TB
+  subgraph channels["Channels — public"]
+    App["App / travel / self-service"]
+    Svc["Service centers — volume down, stack unknown"]
+  end
+
+  subgraph data["Data — public"]
+    Lumi["Lumi — cloud big data"]
+    Corner["Cornerstone — on-prem predecessor"]
+    GCP["GCP — BigQuery / Dataflow / Dataproc"]
+  end
+
+  subgraph use["Uses — public"]
+    Fraud["Fraud models"]
+    Offers["Real-time offers / marketing"]
+  end
+
+  subgraph unknown["Unknown"]
+    Core["Card / membership core"]
+    CRM["CRM / ITSM"]
+  end
+
+  App --> Lumi
+  Lumi --> GCP
+  Corner -.-> Lumi
+  Lumi --> Fraud
+  Lumi --> Offers

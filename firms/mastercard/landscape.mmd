@@ -1,0 +1,33 @@
+%% Mastercard — public reconstruction (10-K, Mastercard.com, MDES).
+
+flowchart TB
+  subgraph access["Access — public"]
+    Issuers["Issuers / acquirers"]
+    AgentPay["Agent Pay / agentic tokens"]
+  end
+
+  subgraph net["Network — public"]
+    Switch["Distributed switch / intelligent routing"]
+    Auth["Authorize"]
+    Clear["Clear / settle"]
+    ACH["ACH + account-based rails"]
+    Stream["Transaction Stream"]
+  end
+
+  subgraph sec["Security — public"]
+    MDES["MDES tokenization"]
+    Fraud["Fraud scoring on-switch"]
+  end
+
+  subgraph unknown["Unknown"]
+    CRM["Client CRM / ITSM"]
+  end
+
+  Issuers --> Switch
+  AgentPay --> MDES
+  Switch --> Auth
+  Auth --> Clear
+  Auth --> Stream
+  Switch --> ACH
+  Auth --> MDES
+  Auth --> Fraud
