@@ -1,0 +1,53 @@
+%% Generic F500 financial-firm landscape (BIAN-shaped). Not one bank's internals.
+%% Maps to what Orbit already has for ingest.
+
+flowchart TB
+  subgraph experience["Experience"]
+    Web["Web / mobile / branch"]
+    CC["Contact center"]
+    RM["RM / banker desktop"]
+  end
+
+  subgraph crm["Sales + CX — we have some"]
+    SF["Salesforce / Agentforce — waiting on DE mail"]
+    HS["HubSpot / Breeze — LIVE 247059637"]
+    ZD["Zendesk — parked, needs phone"]
+    DYN["Dynamics — Samyaza creating"]
+  end
+
+  subgraph itsm["ITSM / ops — we have"]
+    SN["ServiceNow PDI + Now Assist / Build Agent\nLIVE dev406584"]
+  end
+
+  subgraph banking["Banking domains — not ours yet"]
+    Core["Core banking — Temenos / FIS / Finastra"]
+    Pay["Payments — SWIFT / ACH / cards"]
+    Lend["Lending / origination"]
+    Treas["Treasury / GL"]
+  end
+
+  subgraph risk["Risk + control"]
+    GRC["GRC / surveillance"]
+    KYC["KYC / IAM"]
+    Fraud["Fraud / AML"]
+  end
+
+  subgraph data["Data plane"]
+    Bus["Event bus — Kafka"]
+    Lake["Lakehouse + catalog"]
+    MD["Master / reference data"]
+  end
+
+  Web --> crm
+  CC --> crm
+  RM --> crm
+  crm --> SN
+  crm --> Core
+  Core --> Pay
+  Core --> Treas
+  Lend --> Core
+  crm --> KYC
+  Pay --> Fraud
+  Core --> Bus
+  Bus --> Lake
+  Lake --> GRC
